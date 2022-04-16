@@ -18,9 +18,9 @@ namespace Function5
             Shuffle(array);
             Console.WriteLine(" Начальный массив");
 
-            foreach(int i in array)
+            foreach(int value in array)
             {
-                Console.Write(i + " ");
+                Console.Write(value + " ");
             }
 
             Console.WriteLine(" Перемешанный массив");
