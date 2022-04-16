@@ -15,7 +15,7 @@ namespace Function5
                 Console.Write(i + " ");
             }
 
-            Shuffle(ref array);
+            Shuffle(array);
             Console.WriteLine(" Начальный массив");
 
             foreach(int i in array)
@@ -27,7 +27,7 @@ namespace Function5
             Console.ReadKey();
         }
 
-        static void Shuffle(ref int[] array)
+        static void Shuffle(int[] array)
         {
             Random random = new Random();
 
