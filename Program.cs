@@ -2,7 +2,6 @@
 
 namespace Function5
 {
-    //Реализуйте функцию Shuffle, которая перемешивает элементы массива в случайном порядке.
     class Program
     {
         static void Main(string[] args)
@@ -16,7 +15,7 @@ namespace Function5
                 Console.Write(i + " ");
             }
 
-            array = Shuffle(array);
+            Shuffle(ref array);
             Console.WriteLine(" Начальный массив");
 
             foreach(int i in array)
@@ -28,10 +27,8 @@ namespace Function5
             Console.ReadKey();
         }
 
-        static int[] Shuffle(int[] array)
+        static void Shuffle(ref int[] array)
         {
-            int[] tempArray = array;
-
             Random random = new Random();
 
             for (int i = array.Length - 1; i >= 1; i--)
@@ -41,8 +38,6 @@ namespace Function5
                 array[randomValue] = array[i];
                 array[i] = tempValue;
             }
-
-            return tempArray;
         }
     }
 }
